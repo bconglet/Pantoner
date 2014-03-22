@@ -1,0 +1,10 @@
+{
+    "name" : "pantone-for-sass",
+    "version" : "1.0.0",
+    "devDependencies" : {
+        "grunt" :                       "latest",
+        "grunt-contrib-sass":           "*",
+        "grunt-contrib-watch":          "*",
+        "matchdep":                     "*"
+    }
+}
