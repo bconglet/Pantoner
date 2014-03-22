@@ -88,7 +88,7 @@ a {
 
 		input[type=text] {
 			position: absolute;
-			right: 15%;
+			right: 22%;
 			top: 8px;
 			width: 25%;
 		}
@@ -160,8 +160,12 @@ a {
 	border-top: 10px solid #ccc;
 	background: #eee;
 	color: #444;
-	padding: 80px 35%;
+	padding: 80px;
 	text-align: center;
+	
+	@include respond-to( 768px ) {
+		padding: 80px 35%;
+	}
 
 	h4 {
 		text-transform: uppercase;
