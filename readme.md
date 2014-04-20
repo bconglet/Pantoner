@@ -14,4 +14,4 @@ Usage:
 
 The _pantone.scss file itself doesn't output anything, so including it on its own doesn't add to your compiled codebase.
 
-See all the colors, and their codes at http://jpederson.github.io/Pantone-for-Sass/
+See all the colors, and their codes at http://pantone4sass.com/
