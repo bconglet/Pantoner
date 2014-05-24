@@ -15,8 +15,9 @@ $pantone: ("100-c" #f6eb61), ("101" #f4ed47), ("101-c" #f7ea48), ("102" #f9e814)
 }
 
 
-// dump pantone classes
-// NOTE: a bit bulky for production use
+
+// dump pantone bg classes
+// NOTE: not for production use
 @mixin pantone_classes {
     @each $color in $pantone {
         .bg-#{nth( $color, 1 )} {

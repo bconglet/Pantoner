@@ -1,4 +1,15 @@
 
+
+// include the pantone color library
+@import "pantone";
+
+
+// dump the classes for the demo page
+// NOTE: not for production use
+@include pantone_classes;
+
+
+
 /// basic font stuffs
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
@@ -8,20 +19,14 @@
 }
 
 
-// include the pantone color library
-@import "pantone";
-
-
-// dump the classes for the demo page (don't use this in production, just use the pantone function)
-@include pantone_classes;
-
-
 // responsive mixin
 @mixin respond-to( $breakpoint ) {
     @media only screen and (min-width: $breakpoint) { @content; }
 }
 
 
+
+// general styles
 body {
 	margin: 0;
 	@include font;
@@ -37,6 +42,9 @@ a {
 	}
 }
 
+
+
+// header styles
 .header {
 	background: #fff;
 	padding: 20px;
@@ -155,6 +163,7 @@ a {
 }
 
 
+// footer styles
 .footer {
 	clear: both;
 	border-top: 10px solid #ccc;
