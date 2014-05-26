@@ -4,7 +4,7 @@ A more complete library of 2,275 Pantone colors in a Sass function. Feed it the 
 
 Usage:
 
-```sass
+```scss
 @import "pantone";
 
 .my-class {
@@ -15,10 +15,12 @@ Usage:
 
 The _pantone.scss file itself doesn't output anything, so including it on its own doesn't add to your compiled codebase. It has a `pantone_classes` mixin that can be used to generate background classes, but that's only for the demo and not intended for production.
 
-See all the colors, and their codes at http://pantone4sass.com/.
+#### [Demo &amp; Color List](http://pantone4sass.com/)
 
 *****
 
 ### Contributing
 
-Interested in helping out or contributing? Pull requests are welcome!
+To contribute, you'll need [nodejs](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed. Fork and clone the repo, then visit the directory in the terminal and type `npm install`. After that you can simply run the `grunt` command to watch the files in the project. It'll automatically lint, test, compile, and minify files for you.
+
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
