@@ -37,11 +37,8 @@ module.exports = function(grunt) {
 
 		// generate the sass and html files with node scripts
 		shell: {
-			generate_html: {
-				command: 'node dev/generate-html.js --force'
-			},
-			generate_scss: {
-				command: 'node dev/generate-scss.js --force'
+			build: {
+				command: 'node dev/build.js'
 			}
 		}
 
