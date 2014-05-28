@@ -1,6 +1,6 @@
 ## Pantone.scss
 
-A more complete library of 3,193 Pantone colors in a Sass function. Feed it the color number or name and it'll output hex colors. Since it uses a custom Sass function, you must have at least **Sass 3.1.0+**.
+A more complete library of 3,193 Pantone colors in a Sass function. Feed it the color number or name and it'll output hex colors. Since it uses a custom Sass function, you must have at least **Sass 3.1.0+**. Contains both Coated (`-c`) and Uncoated (`-u`) colors.
 
 *****
 
@@ -10,7 +10,7 @@ A more complete library of 3,193 Pantone colors in a Sass function. Feed it the 
 @import "pantone";
 
 .my-class {
-	color: pantone( "519" );
+	color: pantone( "519-u" );
 	background-color: pantone( "warm-grey-1-c" );
 }
 ```
