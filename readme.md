@@ -1,6 +1,6 @@
 ## Pantone.scss
 
-A more complete library of 2,275 Pantone colors in a Sass function. Feed it the color number or name and it'll output hex colors. Since it uses a custom Sass function, you must have at least **Sass 3.1.0+**.
+A more complete library of 3,193 Pantone colors in a Sass function. Feed it the color number or name and it'll output hex colors. Since it uses a custom Sass function, you must have at least **Sass 3.1.0+**.
 
 *****
 
