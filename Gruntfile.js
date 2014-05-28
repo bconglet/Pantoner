@@ -10,8 +10,12 @@ module.exports = function(grunt) {
 		// watch for changes and trigger compass, jshint, uglify and livereload
 		watch: {
 			css: {
-				files: ['*.scss'],
+				files: ['dev/demo.scss','_pantone.scss'],
 				tasks: ['sass']
+			},
+			build: {
+				files: ['dev/*.*','json/*.json'],
+				tasks: ['shell']
 			}
 		},
 
@@ -25,10 +29,21 @@ module.exports = function(grunt) {
 				},
 				files: { 
 					// core admin styles
-					'demo.css': 'demo.scss',
+					'demo.css': 'dev/demo.scss',
 				}
 			}
 		},
+
+
+		// generate the sass and html files with node scripts
+		shell: {
+			generate_html: {
+				command: 'node dev/generate-html.js --force'
+			},
+			generate_scss: {
+				command: 'node dev/generate-scss.js --force'
+			}
+		}
 
 	});
 

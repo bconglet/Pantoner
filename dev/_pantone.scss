@@ -1,0 +1,27 @@
+
+// pantone colors
+$pantone: {{pantone_colors}};
+
+
+
+// grab a specific color based on key
+@function pantone( $color ) {
+    @each $item in $pantone {
+        @if ($color == nth($item, 1)) {
+            @return nth($item, 2);
+        }
+    }
+    @return false;
+}
+
+
+
+// dump pantone bg classes
+// NOTE: not for production use
+@mixin pantone_classes {
+    @each $color in $pantone {
+        .bg-#{nth( $color, 1 )} {
+            background-color: nth( $color, 2 );
+        }
+    }
+}

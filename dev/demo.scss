@@ -1,7 +1,8 @@
 
 
 // include the pantone color library
-@import "pantone";
+@import "../pantone";
+
 
 
 // dump the classes for the demo page
@@ -11,12 +12,13 @@
 
 
 /// basic font stuffs
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700);
 
 @mixin font {
 	font-family: "Open Sans", sans-serif;
 	font-weight: 300;
 }
+
 
 
 // responsive mixin
@@ -103,9 +105,21 @@ a {
 	}
 }
 
+
+
+// swatch styles
 .colors {
 	@include respond-to( 768px ) {
 		margin-top: 70px;
+	}
+
+	h4 {
+		background: pantone( "cool-gray-1-u" );
+		padding: 30px 20px 15px;
+		margin: 0;
+		font-weight: 700;
+		font-size: 14px;
+		clear: both;
 	}
 }
 
@@ -161,6 +175,7 @@ a {
 	}
 
 }
+
 
 
 // footer styles
