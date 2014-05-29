@@ -104,6 +104,9 @@ git clone https://github.com/jpederson/Pantoner.git
 # cd into the folder
 cd pantoner
 
+# install/update dependencies
+npm install
+
 # start the grunt watch task
 grunt
 ```
