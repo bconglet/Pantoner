@@ -24,10 +24,10 @@ A more complete library of 3,193 Pantone colors in a Sass function. Feed it the 
 ### Stylus Usage
 
 ```styl
-@import "_pantone.styl";
+@import "_pantone.styl"
 
 .my-class
-  color: pantone( "519-u" )
+  color pantone( "519-u" )
 ```
 
 *****
