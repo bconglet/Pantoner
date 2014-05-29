@@ -3,6 +3,7 @@
 // set some variables
 var fs = require( "fs" ),
 	csv = require( "fast-csv" ),
+	yaml = require( "yamljs" ),
 	
 	// array of csvs to loop through.
 	files = [
@@ -31,11 +32,12 @@ for ( var i = 0; i < files.length; i++ ) {
 	// read the color file
 	var color_filename = files[i],
 		color_filename_csv = color_filename.replace( ".json", ".csv" ),
+		color_filename_yml = color_filename.replace( ".json", ".yml" ),
 		color_file = JSON.parse( fs.readFileSync( "json/" + color_filename, "utf8" ) ),
 
 		// create a fresh csv stream
-		csvStream = csv.createWriteStream({ headers: true }),
-	    writableStream = fs.createWriteStream( 'csv/'+ color_filename_csv );
+		csv_stream = csv.createWriteStream({ headers: true }),
+	    writable_csv_stream = fs.createWriteStream( 'csv/'+ color_filename_csv );
 
 
 	// create a title var and set it based on filename.
@@ -67,7 +69,8 @@ for ( var i = 0; i < files.length; i++ ) {
 
 
 	// prepare to write the new csv file
-	csvStream.pipe(writableStream);
+	csv_stream.pipe( writable_csv_stream );
+
 
 	// loop through the colors
 	for ( var col = 0; col < color_file.length; col++ ) {
@@ -82,13 +85,20 @@ for ( var i = 0; i < files.length; i++ ) {
 		colors_less.push( '@pantone-'+color_file[col]['pantone']+': '+color_file[col]['hex']+';' );
 
 		// write a record to the CSV
-		csvStream.write( color_file[col] );
+		csv_stream.write( color_file[col] );
 	}
 
-	// write the final csv file
-	csvStream.write( null );
+
+	// write the final csv file for this color set
+	csv_stream.write( null );
 	console.log( "Generated " + color_filename_csv );
 
+
+	// write out the yaml file for this color set
+	fs.writeFile( 'yml/'+color_filename_yml, yaml.stringify( color_file ), function( err ){
+		if (err) throw err;
+	});
+	console.log( 'Generated '+color_filename_yml );
 }
 
 
