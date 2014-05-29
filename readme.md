@@ -1,6 +1,6 @@
 # Pantoner
 
-A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, CSV, YAML, and XML. Contains a total of 3,193 colors including the following sets:
+A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, CSV, YAML, and XML. Contains a total of 3,193 colors from the following sets:
 
 - Coated (`-c`)
 - Uncoated (`-u`)
@@ -9,6 +9,22 @@ A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, C
 
 #### [Demo & Color Reference](http://jpederson.github.io/Pantoner)
 
+
+## Get Started
+
+Installing Pantoner is easy!
+
+#### Git
+
+```sh
+git clone https://github.com/jpederson/Pantoner.git
+```
+
+#### npm
+
+```sh
+npm install pantoner
+```
 
 
 ## For CSS Preprocessors
@@ -73,7 +89,18 @@ I promise to never change these filenames or paths, so you could even call them 
 
 ## Contributing
 
-To contribute, you'll need [nodejs](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed. Fork and clone the repo, then visit the directory in the terminal and type `npm install` to install the dependencies. After that, simply run the `grunt` command to watch the files in the project. 
+To contribute, you'll need [nodejs](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed. Here's a quick idea to get you started:
+
+```sh
+# clone the repo locally
+git clone https://github.com/jpederson/Pantoner.git
+
+# cd into the folder
+cd pantoner
+
+# start the grunt watch task
+grunt
+```
 
 ### Editing Colors
 
