@@ -3,5 +3,4 @@ node_modules
 _dev
 .gitignore
 bower.json
-package.json
 Gruntfile.js
