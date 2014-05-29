@@ -82,7 +82,7 @@ fs.writeFile( 'index.html', index_file.replace( "{{pantone_colors}}", colors_htm
 
 
 // write out the _pantone.scss file.
-fs.writeFile( '_pantone.scss', pantone_file.replace( "{{pantone_colors}}", colors_scss.join(", ") ), function( err ){
+fs.writeFile( 'scss/_pantone.scss', pantone_file.replace( "{{pantone_colors}}", colors_scss.join(", ") ), function( err ){
 
 	if (err) throw err;
 	console.log('Generated _pantone.scss');

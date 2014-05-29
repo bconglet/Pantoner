@@ -9,8 +9,8 @@ module.exports = function(grunt) {
 
 		// watch for changes and trigger compass, jshint, uglify and livereload
 		watch: {
-			css: {
-				files: ['dev/demo.scss','_pantone.scss'],
+			sass: {
+				files: ['dev/demo.scss','scss/_pantone.scss','scss/test.scss'],
 				tasks: ['sass']
 			},
 			build: {
@@ -24,12 +24,12 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				options: {
-					// nested, compact, compressed, expanded
 					style: 'compressed'
 				},
 				files: { 
-					// core admin styles
+					// process demo styles
 					'demo.css': 'dev/demo.scss',
+					'scss/test.css': 'scss/test.scss',
 				}
 			}
 		},
