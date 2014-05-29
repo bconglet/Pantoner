@@ -1,6 +1,6 @@
 # Pantoner
 
-A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, and CSV. Contains a total of 3,193 colors including the following sets:
+A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, CSV, and YAML. Contains a total of 3,193 colors including the following sets:
 
 - Coated (`-c`)
 - Uncoated (`-u`)
@@ -60,7 +60,13 @@ You'll need `less/_pantone.less`. The LESS version is implemented in variables. 
 
 ## Data Formats
 
-All the colors are available in both JSON and CSV formats - both stay up-to-date as new colors are added to the library. I also promise to never change these filenames or locations, so you could even call them directly on a regular basis to update your color lists as needed.
+All the colors are available in the following formats (all are auto-updated when colors are added): 
+
+- JSON
+- CSV
+- YAML
+
+I promise to never change these filenames or paths, so you could even call them directly on a regular basis to update your color lists as needed.
 
 
 
