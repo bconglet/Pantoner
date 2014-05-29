@@ -26,7 +26,7 @@ git clone https://github.com/jpederson/Pantoner.git
 npm install pantoner
 ```
 
-#### bower [![BOWER version](https://badge-me.herokuapp.com/api/bower/jpederson/pantoner.png)](http://badges.enytc.com/for/bower/jpederson/pantoner)
+#### bower [![Bower version](https://badge.fury.io/bo/pantoner.svg)](http://badge.fury.io/bo/pantoner)
 
 ```sh
 bower install pantoner
