@@ -10,6 +10,7 @@
         "grunt-shell":                  "*",
         "fast-csv":                     "*",
         "yamljs":                       "*",
+        "jsontoxml":                    "*",
         "matchdep":                     "*"
     }
 }

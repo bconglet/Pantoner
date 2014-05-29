@@ -4,6 +4,7 @@
 var fs = require( "fs" ),
 	csv = require( "fast-csv" ),
 	yaml = require( "yamljs" ),
+	xml = require('jsontoxml'),
 	
 	// array of csvs to loop through.
 	files = [
@@ -31,9 +32,15 @@ for ( var i = 0; i < files.length; i++ ) {
 
 	// read the color file
 	var color_filename = files[i],
+		color_file = JSON.parse( fs.readFileSync( "json/" + color_filename, "utf8" ) ),
+
+		// set some filenames
 		color_filename_csv = color_filename.replace( ".json", ".csv" ),
 		color_filename_yml = color_filename.replace( ".json", ".yml" ),
-		color_file = JSON.parse( fs.readFileSync( "json/" + color_filename, "utf8" ) ),
+		color_filename_xml = color_filename.replace( ".json", ".xml" ),
+
+		// empty some arrays for each file
+		colors_xml = [],
 
 		// create a fresh csv stream
 		csv_stream = csv.createWriteStream({ headers: true }),
@@ -83,9 +90,13 @@ for ( var i = 0; i < files.length; i++ ) {
 		
 		// push another less array value
 		colors_less.push( '@pantone-'+color_file[col]['pantone']+': '+color_file[col]['hex']+';' );
+		
+		// push another xml record
+		colors_xml.push( xml( { "color": color_file[col] } ) );
 
 		// write a record to the CSV
 		csv_stream.write( color_file[col] );
+		
 	}
 
 
@@ -99,6 +110,13 @@ for ( var i = 0; i < files.length; i++ ) {
 		if (err) throw err;
 	});
 	console.log( 'Generated '+color_filename_yml );
+
+
+	// write out the yaml file for this color set
+	fs.writeFile( 'xml/'+color_filename_xml, colors_xml.join("\n"), function( err ){
+		if (err) throw err;
+	});
+	console.log( 'Generated '+color_filename_xml );
 }
 
 
