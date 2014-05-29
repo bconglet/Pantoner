@@ -9,6 +9,8 @@ A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, C
 
 #### [Demo & Color Reference](http://jpederson.github.io/Pantoner)
 
+*****
+
 
 ## Get Started
 
@@ -31,6 +33,8 @@ npm install pantoner
 ```sh
 bower install pantoner
 ```
+
+*****
 
 
 ## For CSS Preprocessors
@@ -78,6 +82,7 @@ You'll need `less/_pantone.less`. The LESS version is implemented in variables. 
 
 **Important:** The LESS version is intended for **pre**-processing - the library of color variables is 82k, so it's not intended to be included in the codebase your users are required to download. Don't be evil, pre-process your LESS stylesheets! :smile:
 
+*****
 
 
 ## Data Formats
@@ -91,6 +96,7 @@ All the colors are available in the following formats (all are auto-updated when
 
 I promise to never change these filenames or paths, so you could even call them directly on a regular basis to update your color lists as needed.
 
+*****
 
 
 ## Contributing
