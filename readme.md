@@ -1,6 +1,6 @@
 # Pantoner
 
-A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, CSV, and YAML. Contains a total of 3,193 colors including the following sets:
+A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, CSV, YAML, and XML. Contains a total of 3,193 colors including the following sets:
 
 - Coated (`-c`)
 - Uncoated (`-u`)
@@ -65,6 +65,7 @@ All the colors are available in the following formats (all are auto-updated when
 - JSON
 - CSV
 - YAML
+- XML
 
 I promise to never change these filenames or paths, so you could even call them directly on a regular basis to update your color lists as needed.
 
@@ -76,6 +77,6 @@ To contribute, you'll need [nodejs](http://nodejs.org/) and [Grunt](http://grunt
 
 ### Editing Colors
 
-While grunt is active, it watches the JSON files for changes - then generates updated versions of the color library for Sass, LESS and Stylus. It also simultaneously generates CSV files for each of the color sets so the data is available in multiple formats. Since the library uses JSON as the source, you should **only edit the files in the `json` and `dev` folders**.
+While grunt is active, it watches the JSON files for changes - then generates updated versions of the color library for Sass, LESS and Stylus. It also simultaneously generates CSV, YAML, and XML files for each of the color sets so the data is available in multiple formats. Since the library uses JSON as the source, you should **only edit the files in the `json` and `dev` folders** - any changes in generated files are very likely to be overwritten the next time a change is made to the JSON.
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
