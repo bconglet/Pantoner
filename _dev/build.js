@@ -15,10 +15,10 @@ var fs = require( "fs" ),
 	],
 	
 	// bring in the index file and all the pantone templates
-	index_file = fs.readFileSync( "dev/index.html", "utf8" ),
-	scss_file = fs.readFileSync( "dev/_pantone.scss", "utf8" ),
-	stylus_file = fs.readFileSync( "dev/_pantone.styl", "utf8" ),
-	less_file = fs.readFileSync( "dev/_pantone.less", "utf8" ),
+	index_file = fs.readFileSync( "_dev/index.html", "utf8" ),
+	scss_file = fs.readFileSync( "_dev/_pantone.scss", "utf8" ),
+	stylus_file = fs.readFileSync( "_dev/_pantone.styl", "utf8" ),
+	less_file = fs.readFileSync( "_dev/_pantone.less", "utf8" ),
 
 	// empty arrays of colors
 	colors_scss = [],

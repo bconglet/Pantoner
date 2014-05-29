@@ -1,6 +1,12 @@
 {
-    "name" : "pantone-scss",
-    "version" : "1.0.0",
+    "name" : "pantoner",
+    "version" : "1.0.1",
+    "description" : "Comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, CSV, YAML, and XML.",
+    "files" : ["./"],
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/jpederson/Pantoner"
+    },
     "devDependencies" : {
         "grunt" :                       "latest",
         "grunt-contrib-sass":           "*",
@@ -12,5 +18,7 @@
         "yamljs":                       "*",
         "jsontoxml":                    "*",
         "matchdep":                     "*"
-    }
+    },
+    "author" : "James Pederson",
+    "license" : "MIT"
 }

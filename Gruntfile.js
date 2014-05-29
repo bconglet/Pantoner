@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 				tasks: ['less']
 			},
 			build: {
-				files: ['dev/*.*','json/*.json'],
+				files: ['_dev/*.*','json/*.json'],
 				tasks: ['shell']
 			}
 		},
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 				},
 				files: { 
 					// process demo styles
-					'demo.css': 'dev/demo.scss',
+					'demo.css': '_dev/demo.scss',
 					'scss/test.css': 'scss/test.scss',
 				}
 			}
