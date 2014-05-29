@@ -15,7 +15,6 @@ A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, a
 
 There are currently implementations for Sass, LESS and Stylus. Here are some examples, but there are also example files in each of the preprocessor folders as well.
 
-*****
 
 ### Sass Usage
 
@@ -30,7 +29,6 @@ All you'll need for this is `scss/_pantone.scss` and Sass 3.1.0+ (since we're us
 }
 ```
 
-*****
 
 ### Stylus Usage
 
@@ -43,7 +41,6 @@ The function name and parameters are identical to the Sass version, so it's just
   color pantone( "519-u" )
 ```
 
-*****
 
 ### LESS Usage
 
@@ -67,14 +64,15 @@ The LESS version is intended for **pre**-processing - the library of color varia
 
 All the colors are available in both JSON and CSV formats - both stay up-to-date as new colors are added to the library. I also promise to never change these filenames or locations, so you could even call them directly on a regular basis to update your color lists as needed.
 
+
 *****
 
 ## Contributing
 
 To contribute, you'll need [nodejs](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed. Fork and clone the repo, then visit the directory in the terminal and type `npm install` to install the dependencies. After that, simply run the `grunt` command to watch the files in the project. 
 
-### The Build Script
+### Editing Colors
 
-While grunt is active, it watches the JSON files for changes - then generates updated versions of the color library for Sass, LESS and Stylus. It also simultaneously generates a CSV file for each of the JSON files, so we can provide updated CSVs in the repo to anyone that needs them.
+While grunt is active, it watches the JSON files for changes - then generates updated versions of the color library for Sass, LESS and Stylus. It also simultaneously generates CSV files for each of the color sets so the data is available in multiple formats. Since the library uses JSON as the source, you should **only edit the files in the `json` and `dev` folders**.
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
