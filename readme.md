@@ -7,16 +7,16 @@ A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, a
 - Metallics
 - Pastels & Neons
 
-### [Demo & Color Reference](http://jpederson.github.io/Pantoner)
+#### [Demo & Color Reference](http://jpederson.github.io/Pantoner)
 
-*****
+
 
 ## For CSS Preprocessors
 
 There are currently implementations for Sass, LESS and Stylus. Here are some examples, but there are also example files in each of the preprocessor folders as well.
 
 
-### Sass Usage
+#### Sass
 
 All you'll need for this is `scss/_pantone.scss` and Sass 3.1.0+ (since we're using a custom function).
 
@@ -30,7 +30,7 @@ All you'll need for this is `scss/_pantone.scss` and Sass 3.1.0+ (since we're us
 ```
 
 
-### Stylus Usage
+#### Stylus
 
 The function name and parameters are identical to the Sass version, so it's just the syntax differences.
 
@@ -42,11 +42,9 @@ The function name and parameters are identical to the Sass version, so it's just
 ```
 
 
-### LESS Usage
+#### LESS
 
-Because LESS lacks custom functions and looping inside them, the colors are implemented in variables. 
-
-Use the naming convention `@pantone-[color-name]` to access them - like so:
+You'll need `less/_pantone.less`. The LESS version is implemented in variables. Use the naming convention `@pantone-[color-name]` to access them - like so:
 
 ```less
 @import "_pantone.less";
@@ -56,16 +54,15 @@ Use the naming convention `@pantone-[color-name]` to access them - like so:
 }
 ```
 
-The LESS version is intended for **pre**-processing - the library of color variables is 82k, so it's not intended to be included in the codebase your users are required to download. Don't be evil, pre-process your LESS stylesheets! :smile:
+**Important:** The LESS version is intended for **pre**-processing - the library of color variables is 82k, so it's not intended to be included in the codebase your users are required to download. Don't be evil, pre-process your LESS stylesheets! :smile:
 
-*****
+
 
 ## Data Formats
 
 All the colors are available in both JSON and CSV formats - both stay up-to-date as new colors are added to the library. I also promise to never change these filenames or locations, so you could even call them directly on a regular basis to update your color lists as needed.
 
 
-*****
 
 ## Contributing
 
