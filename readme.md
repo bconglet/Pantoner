@@ -51,14 +51,20 @@ Because LESS lacks custom functions and looping inside them, the colors are impl
 }
 ```
 
-The LESS version is intended for **pre**-processing - the library of color variables is 60k, so it's not intended to be included in the codebase your users are required to download. Don't be evil, pre-process your LESS stylesheets! :smile:
+The LESS version is intended for **pre**-processing - the library of color variables is 82k, so it's not intended to be included in the codebase your users are required to download. Don't be evil, pre-process your LESS stylesheets! :smile:
+
+*****
+
+### Just the colors, please!
+
+All the colors are available in both JSON and CSV formats - and both stay up-to-date as new colors are added to the library. I also promise to never change these filenames or locations, so you could even call them directly on a regular basis to update your color lists if you need to.
 
 *****
 
 ### Contributing
 
-To contribute, you'll need [nodejs](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed. Fork and clone the repo, then visit the directory in the terminal and type `npm install`. After that you can simply run the `grunt` command to watch the files in the project. It'll automatically lint, test, compile, and minify files for you.
+To contribute, you'll need [nodejs](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed. Fork and clone the repo, then visit the directory in the terminal and type `npm install` to install the dependencies. After that, simply run the `grunt` command to watch the files in the project. By default, it watches the JSON files for changes - then generates updated versions of the color library for Sass, LESS and Stylus. One could say we're pre-processing our pre-processor code, hah - woah... meta..
 
-**Note:** To change colors, make sure that grunt is running and then edit the JSON files to change or add colors. Grunt is set up to automatically push updated versions of the color library to the Sass, LESS and Stylus versions of the library.
+It also simultaneously generates a CSV file for each of the JSON files, so we can provide updated CSVs in the repo to anyone that needs them.
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
