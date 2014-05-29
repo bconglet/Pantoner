@@ -15,9 +15,11 @@ var fs = require( "fs" ),
 	index_file = fs.readFileSync( "dev/index.html", "utf8" ),
 	scss_file = fs.readFileSync( "dev/_pantone.scss", "utf8" ),
 	stylus_file = fs.readFileSync( "dev/_pantone.styl", "utf8" ),
+	less_file = fs.readFileSync( "dev/_pantone.less", "utf8" ),
 
 	// empty arrays of colors
 	colors_scss = [],
+	colors_less = [],
 	colors_html = [];
 
 
@@ -65,6 +67,9 @@ for ( var i = 0; i < files.length; i++ ) {
 		
 		// push another scss array value
 		colors_scss.push( '("'+color_file[col]['pantone']+'" '+color_file[col]['hex']+')' );
+		
+		// push another scss array value
+		colors_less.push( '@pantone-'+color_file[col]['pantone']+': '+color_file[col]['hex']+';' );
 
 	} 
 
@@ -97,6 +102,16 @@ fs.writeFile( 'stylus/_pantone.styl', stylus_file.replace( "{{pantone_colors}}",
 
 	if (err) throw err;
 	console.log('Generated _pantone.styl');
+
+});
+
+
+
+// write out the _pantone.scss file.
+fs.writeFile( 'less/_pantone.less', less_file.replace( "{{pantone_colors}}", colors_less.join("\n") ), function( err ){
+
+	if (err) throw err;
+	console.log('Generated _pantone.less');
 
 });
 

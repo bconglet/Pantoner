@@ -17,6 +17,10 @@ module.exports = function(grunt) {
 				files: ['stylus/_pantone.styl','stylus/test.styl'],
 				tasks: ['stylus']
 			},
+			less: {
+				files: ['less/_pantone.less','less/test.less'],
+				tasks: ['less']
+			},
 			build: {
 				files: ['dev/*.*','json/*.json'],
 				tasks: ['shell']
@@ -46,6 +50,19 @@ module.exports = function(grunt) {
 					'stylus/test.css': 'stylus/test.styl',
 				}
 			}
+		},
+
+
+		// compile less
+		less: {
+			compile: {
+				options: {
+					compress: true,
+				},
+				files: {
+					"less/test.css": "less/test.less"
+				}
+			},
 		},
 
 

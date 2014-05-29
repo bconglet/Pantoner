@@ -5,6 +5,7 @@
         "grunt" :                       "latest",
         "grunt-contrib-sass":           "*",
         "grunt-contrib-stylus": 		"*",
+        "grunt-contrib-less":           "*",
         "grunt-contrib-watch":          "*",
         "grunt-shell":         			"*",
         "matchdep":                     "*"

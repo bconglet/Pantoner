@@ -1,8 +1,11 @@
-## Pantone for Sass & Stylus
+## Pantone for Sass, LESS & Stylus
 
-A more complete library of 3,193 Pantone colors in a Sass function. Feed it the color number or name and it'll output hex colors. Since it uses a custom Sass function, you must have at least **Sass 3.1.0+**. Contains both Coated (`-c`) and Uncoated (`-u`) colors.
+A more complete library of 3,193 Pantone colors implemented in Sass, LESS, and Stylus. Feed it the color number or name and it'll output hex colors. Contains the following sets of colors:
 
-*****
+- Coated (`-c`)
+- Uncoated (`-u`)
+- Metallics
+- Pastels & Neons
 
 ### [Demo & Color Reference](http://pantone4sass.com/)
 
@@ -29,6 +32,22 @@ A more complete library of 3,193 Pantone colors in a Sass function. Feed it the 
 .my-class
   color pantone( "519-u" )
 ```
+
+*****
+
+### LESS Usage
+
+Because LESS lacks custom functions and looping inside them, the colors are implemented in variables. Use the naming convention `@pantone-**[color-name]**` to access them.
+
+```less
+@import "_pantone.less";
+
+.my-class {
+  color: @pantone-519-u;
+}
+```
+
+The LESS version is intended for **pre**-processing - the library of color variables is 60k, so it's not intended to be included in the codebase your users are required to download. Don't be evil, pre-process your LESS stylesheets! :smile:
 
 *****
 
