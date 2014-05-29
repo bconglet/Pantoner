@@ -26,6 +26,12 @@ git clone https://github.com/jpederson/Pantoner.git
 npm install pantoner
 ```
 
+#### bower
+
+```sh
+bower install pantoner
+```
+
 
 ## For CSS Preprocessors
 
