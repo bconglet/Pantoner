@@ -11,7 +11,8 @@ var fs = require( "fs" ),
 		'pantone-uncoated.json',
 		'pantone-coated.json',
 		'pantone-metallic.json',
-		'pantone-pastels-neons.json'
+		'pantone-pastels-neons.json',
+		'pantone-color-of-the-year.json'
 	],
 	
 	// bring in the index file and all the pantone templates
@@ -61,6 +62,10 @@ for ( var i = 0; i < files.length; i++ ) {
 
 		case "pantone-pastels-neons.json":
 			title = "Pantone Pastels & Neons";
+		break;
+
+		case "pantone-color-of-the-year.json":
+			title = "Pantone Colors of the Year";
 		break;
 
 		case "pantone-uncoated.json":

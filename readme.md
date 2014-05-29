@@ -1,6 +1,6 @@
-# Pantoner
+# Pantoner [![GitHub version](https://badge.fury.io/gh/jpederson%2Fpantoner.svg)](http://github.com/jpederson/Pantoner)
 
-A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, CSV, YAML, and XML. Contains a total of 3,193 colors from the following sets:
+A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, CSV, YAML, and XML. Contains a total of 3,208 colors from the following sets:
 
 - Coated (`-c`)
 - Uncoated (`-u`)
@@ -20,13 +20,13 @@ Installing Pantoner is easy!
 git clone https://github.com/jpederson/Pantoner.git
 ```
 
-#### npm
+#### npm [![NPM version](https://badge.fury.io/js/pantoner.svg)](http://badge.fury.io/js/pantoner) 
 
 ```sh
 npm install pantoner
 ```
 
-#### bower
+#### bower [![BOWER version](https://badge-me.herokuapp.com/api/bower/jpederson/pantoner.png)](http://badges.enytc.com/for/bower/jpederson/pantoner)
 
 ```sh
 bower install pantoner
