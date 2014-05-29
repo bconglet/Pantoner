@@ -2,6 +2,7 @@
 
 // set some variables
 var fs = require( "fs" ),
+	csv = require( "fast-csv" ),
 	
 	// array of csvs to loop through.
 	files = [
@@ -11,7 +12,7 @@ var fs = require( "fs" ),
 		'pantone-pastels-neons.json'
 	],
 	
-	// bring in the index and pantone template
+	// bring in the index file and all the pantone templates
 	index_file = fs.readFileSync( "dev/index.html", "utf8" ),
 	scss_file = fs.readFileSync( "dev/_pantone.scss", "utf8" ),
 	stylus_file = fs.readFileSync( "dev/_pantone.styl", "utf8" ),
@@ -28,7 +29,13 @@ var fs = require( "fs" ),
 for ( var i = 0; i < files.length; i++ ) {
 
 	// read the color file
-	var color_file = JSON.parse( fs.readFileSync( "json/" + files[i], "utf8" ) );
+	var color_filename = files[i],
+		color_filename_csv = color_filename.replace( ".json", ".csv" ),
+		color_file = JSON.parse( fs.readFileSync( "json/" + color_filename, "utf8" ) ),
+
+		// create a fresh csv stream
+		csvStream = csv.createWriteStream({ headers: true }),
+	    writableStream = fs.createWriteStream( 'csv/'+ color_filename_csv );
 
 
 	// create a title var and set it based on filename.
@@ -59,6 +66,9 @@ for ( var i = 0; i < files.length; i++ ) {
 	colors_html.push( "<h4>" + title + "</h4>" );
 
 
+	// prepare to write the new csv file
+	csvStream.pipe(writableStream);
+
 	// loop through the colors
 	for ( var col = 0; col < color_file.length; col++ ) {
 
@@ -68,10 +78,16 @@ for ( var i = 0; i < files.length; i++ ) {
 		// push another scss array value
 		colors_scss.push( '("'+color_file[col]['pantone']+'" '+color_file[col]['hex']+')' );
 		
-		// push another scss array value
+		// push another less array value
 		colors_less.push( '@pantone-'+color_file[col]['pantone']+': '+color_file[col]['hex']+';' );
 
-	} 
+		// write a record to the CSV
+		csvStream.write( color_file[col] );
+	}
+
+	// write the final csv file
+	csvStream.write( null );
+	console.log( "Generated " + color_filename_csv );
 
 }
 
