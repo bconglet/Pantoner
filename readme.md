@@ -22,9 +22,13 @@ A more complete library of 3,193 Pantone colors implemented in Sass, LESS, and S
 }
 ```
 
+The Sass version uses a custom function, so it requires **Sass 3.1.0+**.
+
 *****
 
 ### Stylus Usage
+
+The function name and parameters are identical to the Sass version.
 
 ```styl
 @import "_pantone.styl"
@@ -55,6 +59,6 @@ The LESS version is intended for **pre**-processing - the library of color varia
 
 To contribute, you'll need [nodejs](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed. Fork and clone the repo, then visit the directory in the terminal and type `npm install`. After that you can simply run the `grunt` command to watch the files in the project. It'll automatically lint, test, compile, and minify files for you.
 
-**Note:** To change colors, make sure that grunt is running and then edit the JSON files to change or add colors. Grunt is set up to automatically push updated versions of the color library to both the Sass and Stylus versions.
+**Note:** To change colors, make sure that grunt is running and then edit the JSON files to change or add colors. Grunt is set up to automatically push updated versions of the color library to the Sass, LESS and Stylus versions of the library.
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
