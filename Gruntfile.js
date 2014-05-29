@@ -10,8 +10,12 @@ module.exports = function(grunt) {
 		// watch for changes and trigger compass, jshint, uglify and livereload
 		watch: {
 			sass: {
-				files: ['dev/demo.scss','scss/_pantone.scss','scss/test.scss'],
+				files: ['scss/_pantone.scss','scss/test.scss'],
 				tasks: ['sass']
+			},
+			stylus: {
+				files: ['stylus/_pantone.styl','stylus/test.styl'],
+				tasks: ['stylus']
 			},
 			build: {
 				files: ['dev/*.*','json/*.json'],
@@ -20,7 +24,7 @@ module.exports = function(grunt) {
 		},
 
 
-		// we use the Sass
+		// compile sass
 		sass: {
 			dist: {
 				options: {
@@ -30,6 +34,16 @@ module.exports = function(grunt) {
 					// process demo styles
 					'demo.css': 'dev/demo.scss',
 					'scss/test.css': 'scss/test.scss',
+				}
+			}
+		},
+
+
+		// compile stylus
+		stylus: {
+			compile: {
+				files: {
+					'stylus/test.css': 'stylus/test.styl',
 				}
 			}
 		},

@@ -13,7 +13,8 @@ var fs = require( "fs" ),
 	
 	// bring in the index and pantone template
 	index_file = fs.readFileSync( "dev/index.html", "utf8" ),
-	pantone_file = fs.readFileSync( "dev/_pantone.scss", "utf8" ),
+	scss_file = fs.readFileSync( "dev/_pantone.scss", "utf8" ),
+	stylus_file = fs.readFileSync( "dev/_pantone.styl", "utf8" ),
 
 	// empty arrays of colors
 	colors_scss = [],
@@ -82,10 +83,20 @@ fs.writeFile( 'index.html', index_file.replace( "{{pantone_colors}}", colors_htm
 
 
 // write out the _pantone.scss file.
-fs.writeFile( 'scss/_pantone.scss', pantone_file.replace( "{{pantone_colors}}", colors_scss.join(", ") ), function( err ){
+fs.writeFile( 'scss/_pantone.scss', scss_file.replace( "{{pantone_colors}}", colors_scss.join(", ") ), function( err ){
 
 	if (err) throw err;
 	console.log('Generated _pantone.scss');
+
+});
+
+
+
+// write out the _pantone.scss file.
+fs.writeFile( 'stylus/_pantone.styl', stylus_file.replace( "{{pantone_colors}}", colors_scss.join(" ") ), function( err ){
+
+	if (err) throw err;
+	console.log('Generated _pantone.styl');
 
 });
 

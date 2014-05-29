@@ -4,6 +4,7 @@
     "devDependencies" : {
         "grunt" :                       "latest",
         "grunt-contrib-sass":           "*",
+        "grunt-contrib-stylus": 		"*",
         "grunt-contrib-watch":          "*",
         "grunt-shell":         			"*",
         "matchdep":                     "*"
