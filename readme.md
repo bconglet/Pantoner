@@ -1,11 +1,13 @@
 # Pantoner [![GitHub version](https://badge.fury.io/gh/jpederson%2Fpantoner.svg)](http://github.com/jpederson/Pantoner)
 
-A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, CSV, YAML, and XML. Contains a total of 3,208 colors from the following sets:
+A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, CSV, YAML, and XML. Contains a total of 3,238 colors from the following sets:
 
 - Coated (`-c`)
 - Uncoated (`-u`)
 - Metallics
-- Pastels & Neons
+- Pastels & Neons (Coated)
+- Skin Colors
+- Colors of the Year
 
 #### [Demo & Color Reference](http://jpederson.github.io/Pantoner)
 

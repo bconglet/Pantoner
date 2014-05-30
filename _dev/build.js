@@ -12,6 +12,7 @@ var fs = require( "fs" ),
 		'pantone-coated.json',
 		'pantone-metallic.json',
 		'pantone-pastels-neons.json',
+		'pantone-skin.json',
 		'pantone-color-of-the-year.json'
 	],
 	
@@ -62,6 +63,10 @@ for ( var i = 0; i < files.length; i++ ) {
 
 		case "pantone-pastels-neons.json":
 			title = "Pantone Pastels & Neons";
+		break;
+
+		case "pantone-skin.json":
+			title = "Pantone Skin Tones";
 		break;
 
 		case "pantone-color-of-the-year.json":
