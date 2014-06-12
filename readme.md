@@ -1,3 +1,9 @@
+#### Attention! :)
+
+I will no longer be updating this as all the colors in it are also in [Colorly](http://github.com/jpederson/Colorly/) which I wrote.
+
+*****
+
 # Pantoner [![GitHub version](https://badge.fury.io/gh/jpederson%2Fpantoner.svg)](http://github.com/jpederson/Pantoner)
 
 A comprehensive Pantone color library implemented in Sass, LESS, Stylus, JSON, CSV, YAML, and XML. Contains a total of 3,238 colors from the following sets:
